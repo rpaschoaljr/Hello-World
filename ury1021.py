@@ -32,7 +32,7 @@ n = n - moeda_10
 qtd_moeda_5 = n // .05
 moeda_5 = qtd_moeda_5 * .05
 n = n - moeda_5
-qtd_moeda_011 = n // .01
+qtd_moeda_01 = n // .01
 print("NOTAS:")
 print(str(qtd_nota_100) + " nota(s) de R$ 100.00")
 print(str(qtd_nota_50) + " nota(s) de R$ 50.00")
@@ -44,6 +44,6 @@ print("MOEDAS:")
 print(str(qtd_moeda_1) + " moeda(s) de R$ 1.00")
 print(str(qtd_moeda_50) + " moeda(s) de R$ 0.50")
 print(str(qtd_moeda_25) + " moeda(s) de R$ 0.25")
-print(str(wtd_moeda_10) + " moeda(s) de R$ 0.10")
+print(str(qtd_moeda_10) + " moeda(s) de R$ 0.10")
 print(str(qtd_moeda_5) + " moeda(s) de R$ 0.05")
 print(str(qtd_moeda_01) + " moeda(s) de R$ 0.01")
