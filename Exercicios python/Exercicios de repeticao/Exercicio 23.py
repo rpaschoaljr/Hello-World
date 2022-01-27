@@ -3,21 +3,19 @@
 #   Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
 
 primos = []
-n = int(input("Insira um numero para fazer os calculos: "))
+n = int(input("as: "))
 divisoes = 0
-cont = 0
-numeros = []
-for i in range(1,n+1):
-    numeros.append(i)
-for i in range(0,n-1):
-    for j in range(1,numeros[i]+1):
-        teste = numeros[i] % j
-        divisoes +=1
+for j in range(0,n+1):
+    numero = j
+    cont = 0
+    for i in range(1,numero+1):
+        teste = numero % i
+        divisoes += 1
         if (teste == 0):
+            divisores.append(i) # Segunda parte
             cont += 1
-            primos.append(i)
-
-print(numeros)
-print(cont)
-print(divisoes)
+    if ((numero == 1) or (cont == 2)):
+        primos.append(numero)
 print(primos)
+print(divisoes)
+    
