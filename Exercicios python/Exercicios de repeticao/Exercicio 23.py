@@ -3,7 +3,7 @@
 #   Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
 
 primos = []
-n = int(input("as: "))
+n = int(input("Informe o range: "))
 divisoes = 0
 for j in range(0,n+1):
     numero = j
@@ -12,7 +12,7 @@ for j in range(0,n+1):
         teste = numero % i
         divisoes += 1
         if (teste == 0):
-            divisores.append(i) # Segunda parte
+            divisores.append(i)
             cont += 1
     if ((numero == 1) or (cont == 2)):
         primos.append(numero)
