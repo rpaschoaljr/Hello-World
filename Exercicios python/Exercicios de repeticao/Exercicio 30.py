@@ -8,4 +8,7 @@
 #    2 - R$ 0.36
 #    ...
 #    50 - R$ 9.00
- 
+preco = 0.18
+print("Preco do pao: R$ 0.18")
+for i in range(1,51):
+    print("%d - R$ %.2f"%(i,preco*i))
