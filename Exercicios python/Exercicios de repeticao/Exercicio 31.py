@@ -8,7 +8,33 @@
 #           Produto 1: R$ 2.20
 #           Produto 2: R$ 5.80
 #           Produto 3: R$ 0
-#           Total: R$ 9.00
+#           Total: R$ 8.00
 #           Dinheiro: R$ 20.00
-#           Troco: R$ 11.00
+#           Troco: R$ 12.00
 #           ...
+valores = []
+a = 1
+while a == 1:
+    preco = float(input('Insira o preco: '))
+    if preco == 0:
+        total = sum(number for number in valores)
+        a = 2
+    else:
+        valores.append(preco)
+while a == 2:   
+    dinheiro = float(input("Digite o valor recebido: "))
+    troco = dinheiro - total
+    if troco < 0:
+        print("Dinheiro insulficiente!")
+    else:
+        tamanho = len(valores)
+        a = 3
+print("." *30)   
+print("Lojas Tabajara")
+print("." *30)
+for i in range(0,tamanho):
+    print("Poduto %d: R$ %.2f" %(i+1, valores[i]))
+print("Total: R$ %.2f" %(total))
+print("Dinheiro: R$ %.2f"%(dinheiro))
+print("Troco: R$ %.2f" %(troco))
+print("." *30)
