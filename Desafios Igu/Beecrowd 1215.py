@@ -2,20 +2,22 @@ dicionario = {}
 textao = input().lower()
 textaosplitado = textao.split(" ")
 qtdCaracter = len(textaosplitado)
+especiais = '".,;:!?[}[{\|/'
+texto = []
 
 #Definir a funcao
 def adicona():
   return
 #Removendo especiais
-for i in range(qtdCaracter):
-  teste = textaosplitado[i]
+for k in range(qtdCaracter):
+  teste = textaosplitado[k]
   testeTamanho = len(teste)
-  for j in range(testeTamanho):
-    if teste[j].isalpha():
-      adiciona()
-    else:
-      teste = teste.replace(teste[0:testeTamanho], teste[0:testeTamanho-1])
-      adiciona()
+  for j in especiais:
+      teste = teste.replace(j, '')
+      if teste not in texto:
+        texto.append(teste)
+      print(texto)
+     # adiciona()
 #Termino da remocao
 
 #Transformar a parte abaixo em funcao
